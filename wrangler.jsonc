@@ -1,0 +1,18 @@
+{
+	"$schema": "./node_modules/wrangler/config-schema.json",
+	"name": "faka",
+	"compatibility_date": "2026-03-12",
+	"main": "virtual:photon:cloudflare:server-entry",
+	"compatibility_flags": ["nodejs_compat"],
+	"observability": {
+		"enabled": true,
+		"head_sampling_rate": 0.1
+	},
+	"d1_databases": [
+		{
+			"binding": "DB",
+			"database_name": "edgekey-db",
+			"migrations_dir": "prisma/migrations","database_id": "f090dac3-7469-4d40-a1c1-f48844489012"
+		}
+	]
+}
